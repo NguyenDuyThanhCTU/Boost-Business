@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .TopHeader_dropdown__asawl .TopHeader_dropdownContent__j2ms0::after {
+    position: absolute;
+    padding: 5px;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    z-index: -999;
+    top: -8px;
+    transform: rotate(-45deg);
+    border-color: #2c95ff #2c95ff transparent transparent;
+    border-style: solid;
+    border-width: 1px;
+    left: calc(50% - 8px);
+
+}
+.TopHeader_dropdown__asawl:hover .TopHeader_dropdownContent__j2ms0 {
+    opacity: 1;
+    z-index: 4;
+    margin-top: 12px;
+    transition-delay: 0s;
+  }
+  .TopHeader_dropdown__asawl .TopHeader_dropdownContent__j2ms0 {
+    opacity: 0;
+    transition-delay: .25s;
+    position: absolute;
+    min-width: 120px;
+    left: 0;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #2c95ff;
+    box-sizing: border-box;
+    box-shadow: 0 8px 8px rgba(10,0,56,.05);
+    border-radius: 4px;
+    z-index: -9999;
+  } */
