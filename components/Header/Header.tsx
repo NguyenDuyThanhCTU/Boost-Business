@@ -6,7 +6,7 @@ import React from "react";
 import { BsListTask } from "react-icons/bs";
 import { IoMdArrowDropdown } from "react-icons/io";
 
-const Header = () => {
+const Header = ({ Login }: any) => {
   return (
     <div className="font-LexendDeca h-[113px] bg-primary">
       {" "}
@@ -56,7 +56,10 @@ const Header = () => {
             <p className=" text-[10px] leading-[16px] font-semibold">
               Người tìm việc
             </p>
-            <h3 className=" text-[14px]  leading-[24px] font-semibold">
+            <h3
+              className=" text-[14px]  leading-[24px] font-semibold"
+              onClick={() => Login(true)}
+            >
               Đăng ký/Đăng nhập
             </h3>
           </div>

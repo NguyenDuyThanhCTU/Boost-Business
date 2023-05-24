@@ -29,6 +29,7 @@ module.exports = {
         colortopdownBlue1: "#e5f2ff",
         colortopdownGray2: "#441d9f14",
         colorBlueBold: "#451da0",
+        colorBlueBoldHover: "#391888",
         colorGrayThin: "#b6b6b8",
       },
     },

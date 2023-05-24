@@ -5,8 +5,10 @@ import DefaultLayout from "@layout/DefaultLayout/DefaultLayout";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <DefaultLayout>
-      <Component {...pageProps} />
-    </DefaultLayout>
+    <div>
+      <DefaultLayout>
+        <Component {...pageProps} />
+      </DefaultLayout>
+    </div>
   );
 }
