@@ -34,5 +34,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-/config/Firebase/Firebase.tsx
+config/Firebase/Firebase.ts
 
