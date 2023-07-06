@@ -2,8 +2,10 @@
 import React, { createContext, useContext, useState } from "react";
 
 export type StateContextType = {
-  test: boolean;
-  setTest: (test: boolean) => void;
+  isLoading: boolean;
+  setIsLoading: (isLoading: boolean) => void;
+  IsAlert: string;
+  setIsAlert: (IsAlert: string) => void;
 };
 
 type StateProviderProps = {
@@ -11,14 +13,19 @@ type StateProviderProps = {
 };
 
 export const StateContext = createContext<StateContextType>({
-  test: false,
-  setTest: () => {},
+  isLoading: false,
+  setIsLoading: () => {},
+  IsAlert: "",
+  setIsAlert: () => {},
 });
 
 export const StateProvider = ({ children }: StateProviderProps) => {
-  const [test, setTest] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [IsAlert, setIsAlert] = useState("");
   return (
-    <StateContext.Provider value={{ setTest, test }}>
+    <StateContext.Provider
+      value={{ isLoading, setIsLoading, IsAlert, setIsAlert }}
+    >
       {children}
     </StateContext.Provider>
   );

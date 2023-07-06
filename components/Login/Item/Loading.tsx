@@ -3,10 +3,10 @@ import { useStateProvider } from "@context/StateProvider";
 import React from "react";
 import { FaSpinner } from "react-icons/fa";
 const Loading = () => {
-  const { test } = useStateProvider();
+  const { isLoading } = useStateProvider();
   return (
     <>
-      {test && (
+      {isLoading && (
         <div className=" bg-gray-500 bg-opacity-50 flex justify-center items-center w-screen h-screen">
           <div className="fixed top-0 left-0 w-screen h-screen bg-gray-500 bg-opacity-75 flex justify-center items-center">
             <div className="text-xl font-bold text-primary flex flex-col items-center">

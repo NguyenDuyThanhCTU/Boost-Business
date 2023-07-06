@@ -1,5 +1,6 @@
 import "@styles/styles.css";
 import { StateProvider } from "@context/StateProvider";
+import { Alert } from "antd";
 export const metadata = {
   title: "Đăng nhập",
   description: "Sàn việc làm cần thơ",
@@ -22,7 +23,7 @@ export default function LoginLayout({ children }: LoginLayoutProps) {
       </head>
       <body>
         <StateProvider>
-          <div className="bg-[rgba(0,0,0,0.3)] w-screen h-screen relative">
+          <div className="bg-[rgba(0,0,0,0.3)] w-screen h-screen ">
             {children}
           </div>
         </StateProvider>
