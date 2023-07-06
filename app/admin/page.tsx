@@ -1,7 +1,11 @@
-import React from "react";
-
-const Admin = () => {
-  return <div>Admin</div>;
-};
-
-export default Admin;
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body>{children} </body>
+    </html>
+  );
+}
