@@ -1,7 +1,6 @@
 import React from "react";
 import Login from "@components/Login/Login";
 import Loading from "@components/Login/Item/Loading";
-import Alert from "@components/Login/Item/Alert";
 
 const LoginPage = () => {
   return (
@@ -10,7 +9,6 @@ const LoginPage = () => {
         <Login />
       </div>
       <Loading />
-      <Alert />
     </div>
   );
 };

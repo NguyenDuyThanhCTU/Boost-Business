@@ -2,10 +2,12 @@
 import React, { createContext, useContext, useState } from "react";
 
 export type StateContextType = {
-  isLoading: boolean;
-  setIsLoading: (isLoading: boolean) => void;
-  IsAlert: string;
-  setIsAlert: (IsAlert: string) => void;
+  State: string;
+  setState: (state: string) => void;
+  Verify: boolean;
+  setVerify: (isLoading: boolean) => void;
+  IsChangePassword: boolean;
+  setIsChangePassword: (isLoading: boolean) => void;
 };
 
 type StateProviderProps = {
@@ -13,18 +15,29 @@ type StateProviderProps = {
 };
 
 export const StateContext = createContext<StateContextType>({
-  isLoading: false,
-  setIsLoading: () => {},
-  IsAlert: "",
-  setIsAlert: () => {},
+  State: "",
+  setState: () => {},
+  Verify: false,
+  setVerify: () => {},
+  IsChangePassword: false,
+  setIsChangePassword: () => {},
 });
 
 export const StateProvider = ({ children }: StateProviderProps) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [IsAlert, setIsAlert] = useState("");
+  const [IsChangePassword, setIsChangePassword] = useState(false);
+  const [Verify, setVerify] = useState(false);
+  const [State, setState] = useState("");
+
   return (
     <StateContext.Provider
-      value={{ isLoading, setIsLoading, IsAlert, setIsAlert }}
+      value={{
+        State,
+        setState,
+        IsChangePassword,
+        setIsChangePassword,
+        Verify,
+        setVerify,
+      }}
     >
       {children}
     </StateContext.Provider>

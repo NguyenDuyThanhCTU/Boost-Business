@@ -1,20 +1,30 @@
 import React from "react";
-import Button from "./Item/Button";
 
+import Exit from "@components/Item/Exit";
+import LeftSide from "./LeftSide/LeftSide";
 const Login = () => {
   return (
-    <div>
-      <div className="flex-1  m-5 mt-8 mb-2 flex-col flex items-center justify-center  relative">
-        <h3 className="text-colortopdownGray text-[20px] font-medium">
-          Người quản trị
-        </h3>
+    <>
+      {/* <-- Left Side --> */}
 
-        <h2 className="text-colortopdownGray text-[24px] font-semibold">
-          Đăng nhập
-        </h2>
-        <Button />
+      <div className="flex-1  m-5 mt-8 mb-2 flex-col flex items-center justify-center  ">
+        <LeftSide />
       </div>
-    </div>
+
+      {/* <-- Right Side --> */}
+      <div className="d:flex flex-1 p:hidden relative">
+        <div className="overflow-hidden h-full">
+          <img
+            src="https://vieclam24h.vn/img/loginv2/bg-register.png"
+            alt=""
+            className="object-contain "
+          />
+        </div>
+        <div className="absolute left-1/4 bottom-10 text-white ">
+          <Exit />
+        </div>
+      </div>
+    </>
   );
 };
 
