@@ -5,7 +5,7 @@ export type StateContextType = {
   State: string;
   setState: (state: string) => void;
   Verify: boolean;
-  setVerify: (isLoading: boolean) => void;
+  setVerify: (Verify: boolean) => void;
   IsChangePassword: boolean;
   setIsChangePassword: (isLoading: boolean) => void;
 };

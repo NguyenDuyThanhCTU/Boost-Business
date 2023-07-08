@@ -11,7 +11,7 @@ const Form = () => {
   const [Hide, setHide] = useState(false);
   const [Username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
-
+  console.log(Username, Password);
   const router = useRouter();
 
   const { account } = useData();
@@ -23,6 +23,7 @@ const Form = () => {
       Password === account[0]?.password
     ) {
       setVerify(true);
+
       notification["success"]({
         message: "Success !",
         description: `Chào mừng đến với ${window.location.hostname} !`,

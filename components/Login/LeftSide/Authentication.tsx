@@ -1,11 +1,14 @@
 "use client";
-import React from "react";
+import React, { Suspense } from "react";
 import Button from "../Item/Button";
-import Form from "../Item/Form";
+// import Form from "../Item/Form";
 import { useStateProvider } from "@context/StateProvider";
 import ChangePassword from "./ChangePassword";
+import dynamic from "next/dynamic";
 
-const LeftSide = () => {
+const Form = dynamic(() => import("../Item/Form"), { ssr: false });
+
+const Authentication = () => {
   const { IsChangePassword } = useStateProvider();
   return (
     <>
@@ -27,6 +30,7 @@ const LeftSide = () => {
               Hoặc tiếp tục với Username
             </p>
           </div>
+
           <Form />
         </>
       )}
@@ -34,4 +38,4 @@ const LeftSide = () => {
   );
 };
 
-export default LeftSide;
+export default Authentication;
